@@ -36,3 +36,8 @@ const logo = document.querySelectorAll('#logo path');
 for(let i = 0; i< logo.length; i++) {
     console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
 }
+
+window.addEventListener("scroll", function() {
+    var header = this.document.querySelector(".headline")
+    header.classList.toggle("sticky", window.scrollY > 0)
+})
